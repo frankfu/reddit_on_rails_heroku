@@ -46,3 +46,6 @@ gem 'devise'
 
 # For Heroku
 gem 'rails_12factor', group: :production
+
+# Paginate for page turning
+gem 'will_paginate', '~> 3.0'

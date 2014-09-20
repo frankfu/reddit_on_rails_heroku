@@ -7,5 +7,8 @@
     <%= link_to link.title, link.url %><br>
   <% end %>
 </ul>
-
+<%= will_paginate @links %>
+<br>
+<br>
+<br>
 <%= link_to "Add a link", new_link_path %>
