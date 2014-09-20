@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RedditOnRails</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert%></p>
+
+<%# user is logged in, show log out link %>
+<% if current_user.present? %>
+  <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
+<%# user is not logged in, show sign up and log in link %>
+<% else %>
+  <%= link_to 'Sign in', new_user_session_path %> |
+  <%= link_to 'Register', new_user_registration_path %>
+<% end %>
+
+<%= yield %>
+
+</body>
+</html>
