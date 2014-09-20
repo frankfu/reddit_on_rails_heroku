@@ -1,3 +1,11 @@
 <h2>Here be the homepage</h2>
 
+<h3>Submitted Links</h3>
+
+<ul>
+  <% @links.each do |link| %>
+    <%= link_to link.title, link.url %><br>
+  <% end %>
+</ul>
+
 <%= link_to "Add a link", new_link_path %>
