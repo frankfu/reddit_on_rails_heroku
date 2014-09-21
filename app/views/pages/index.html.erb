@@ -4,7 +4,7 @@
 
 <ul>
   <% @links.each do |link| %>
-    <%= link_to link.title, link.url %>
+    <%= link_to link.title, extlink(link.url) %>
     <%= link_to "comments", link %>
     <%= link_to "+", votes_path(:vote => {:link_id => link.id, :up => true}), :method => :post %>
     <%= link_to "-", votes_path(:vote => {:link_id => link.id, :up => false}), :method => :post %>

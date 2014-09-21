@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RedditOnRails</title>
+  <title>weddit</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -20,6 +20,9 @@
 <% end %>
 
 <%= yield %>
+
+<br>
+<%= link_to "Home", "/pages" %>
 
 </body>
 </html>
